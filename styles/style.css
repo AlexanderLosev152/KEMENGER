@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+}
+
+.container {
+  max-width: 1410px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  padding-top: 20px;
+  margin-right: 101px;
+  transition: 0.2s;
+}
+.header__nav {
+  
+}
+.header__nav--items {
+  padding-left: 10px;
+  display: flex;
+  gap: 40px;
+}
+.header__nav--link {
+}
+.header__tel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: red;
+}
+
+.header__link {
+	position: relative;
+}
+.header__link:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #FAE01A; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.header__link:hover {
+  color: #3b3b3b;
+}
+
+.header__link:hover:after,
+.header__link:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
