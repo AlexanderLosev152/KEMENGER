@@ -20,16 +20,22 @@ body {
   padding: 19px 43px 24px;
   background: #fae01a;
   box-shadow: 0px 20px 40px -27px rgb(0 0 0 / 15%);
+  border: none;
   border-radius: 50px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: #feeb59;
   color: #4f4e4e;
+}
+
+.btn:active {
+  transform: translate(0em, 0.15em);
 }
 
 /* header */
@@ -358,19 +364,22 @@ body {
 }
 .catalog__swiper-wraper {
 }
+
 .swiper-wraper {
   display: flex;
   justify-content: space-between;
 }
 .catalog__swiper-slide {
   width: 387px;
-  max-height: 976px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #ffffff;
   box-shadow: 0px 52px 34px -27px rgba(225, 225, 225, 0.15);
   border-radius: 30px;
+  margin-bottom: 80px;
+  position: relative;
 }
 
 .catalog__swiper-slide h3 {
@@ -380,7 +389,6 @@ body {
   line-height: 80px;
   text-transform: uppercase;
   color: #fff;
-  background: #018fa3;
   border-radius: 30px 30px 0px 0px;
   width: 387px;
   height: 80px;
@@ -398,26 +406,91 @@ body {
   text-transform: uppercase;
 }
 .catalog__swiper-timetable {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 87px;
+  justify-content: center;
+  margin: 24px 0 40px;
 }
+
+.catalog__swiper-subject {
+  margin-bottom: 70px;
+}
+
+.catalog__swiper--items {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
 .catalog__swiper-item {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+  padding-bottom: 24px;
 }
-.catalog__swiper-subject {
+
+.catalog__swiper-items {
+  display: flex;
   text-align: center;
-}
-.catalog__swiper-btn {
-}
-.catalog__swiper-hidden {
-  text-align: center;
+  flex-direction: column;
 }
 
 .swiper__btn {
-  margin: 60px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+  background: #018fa3;
+  border-radius: 40px;
+  border: none;
+  padding: 19px 60px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  bottom: 25px;
 }
 
-.btn {
+.swiper__btn:hover {
+  background: #feeb59;
+  color: #4f4e4e;
+}
+
+.swiper__btn:active {
+  transform: translate(0em, 0.15em);
+}
+
+.catalog__swiper--btn {
+  border: none;
+  background: transparent;
+  color: #018fa3;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: 110px;
+}
+
+.catalog__swiper--btn:hover {
+  color: #fae01a;
+}
+
+#more {
+  display: none;
+}
+
+/* bg */
+
+.school__bg {
+  background: #018fa3;
+}
+
+.reading__bg {
+  background: #955eea;
+}
+
+.arithmetic__bg {
+  background: #4eca30;
 }
