@@ -62,3 +62,5 @@
       arithmeticMore.style.display="inline"
     }
   }
+
+

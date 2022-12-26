@@ -99,8 +99,6 @@ body {
   align-items: center;
   height: 100vh;
 }
-.header__info--text {
-}
 .header__info--text-title {
   width: 664px;
   padding-bottom: 64px;
@@ -117,8 +115,7 @@ body {
   width: 532px;
   padding-bottom: 44px;
 }
-.header__info--text-btn {
-}
+
 .header__info--img {
   position: relative;
   right: 60px;
@@ -281,8 +278,7 @@ body {
   width: 374px;
   padding-top: 16px;
 }
-.about__skill--group {
-}
+
 .about__skill--items {
   display: flex;
   top: 0;
@@ -356,18 +352,11 @@ body {
   font-size: 48px;
   line-height: 59px;
 }
-.title {
-}
-.catalog__swiper {
-}
-.swiper {
-}
-.catalog__swiper-wraper {
-}
 
 .swiper-wraper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .catalog__swiper-slide {
   width: 387px;
@@ -395,8 +384,6 @@ body {
   text-align: center;
 }
 
-.swiper-slide {
-}
 .price {
   padding: 60px 0 24px;
   font-style: normal;
@@ -477,7 +464,9 @@ body {
   color: #fae01a;
 }
 
-#more {
+#schoolMore,
+#readingMore,
+#arithmeticMore {
   display: none;
 }
 
