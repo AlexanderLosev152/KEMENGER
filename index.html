@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
     <title>KEMENGER</title>
   </head>
   <body>
@@ -157,15 +160,18 @@
     <section class="catalog">
       <div class="container">
         <h2 class="catalog__title title">Каталог</h2>
-        <div class="catalog__swiper swiper">
-          <div class="catalog__swiper-wraper swiper-wraper">
-            <div class="catalog__swiper-slide swiper-slide ">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
               <h3 class="school__bg">Подготовка к школе</h3>
               <span class="price">30 000 тг</span>
               <div class="catalog__swiper-timetable">
-                <ul class="catalog__swiper--items">
-                  <li class="catalog__swiper-item">4-6 лет</li>
-                  <li class="catalog__swiper-item">3 занятия в неделю по 3 ч.</li>
+                <ul class="catalog__swiper--items swiper-timetable">
+                  <li class="catalog__swiper-item swiper-timetable">4-6 лет</li>
+                  <li class="catalog__swiper-item swiper-timetable">
+                    3 занятия в неделю по 3 ч.
+                  </li>
                   <li class="catalog__swiper-item"></li>
                 </ul>
               </div>
@@ -175,8 +181,8 @@
                   <li class="catalog__swiper-item">Письмо</li>
                   <li class="catalog__swiper-item">Математика</li>
                   <li class="catalog__swiper-item">Английский язык</li>
-                  <span id="schoolDots"></span>
-                  <div id="schoolMore" class="catalog__swiper--items">
+                  <span class="dots" id="dots"></span>
+                  <div id="more" class="catalog__swiper--items more">
                     <li class="catalog__swiper-item">Развитие речи</li>
                     <li class="catalog__swiper-item">Концентрация внимания</li>
                     <li class="catalog__swiper-item">
@@ -190,45 +196,71 @@
                     </li>
                   </div>
                 </ul>
-                <button class="catalog__swiper--btn" id="schoolBtn" onclick="schoolReadMore()">Подробнее...</button>
+                <button
+                  class="catalog__swiper--btn"
+                  id="btn"
+                  onclick="readMore()"
+                >
+                  Подробнее...
+                </button>
               </div>
               <button class="swiper__btn btn">Выбрать</button>
             </div>
-            <div class="catalog__swiper-slide swiper-slide">
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
               <h3 class="reading__bg">скорочтение</h3>
-              <span class="price">27 000  тг</span>
+              <span class="price">27 000 тг</span>
               <div class="catalog__swiper-timetable">
-                <ul class="catalog__swiper-items">
-                  <li class="catalog__swiper-item">6-15 лет</li>
-                  <li class="catalog__swiper-item">3 занятия в неделю по 1 ч.</li>
+                <ul class="catalog__swiper--items swiper-timetable">
+                  <li class="catalog__swiper-item swiper-timetable">6-15 лет</li>
+                  <li class="catalog__swiper-item swiper-timetable">
+                    3 занятия в неделю по 1 ч.
+                  </li>
                 </ul>
               </div>
               <div class="catalog__swiper-subject">
                 <ul class="catalog__swiper--items">
-                  <li class="catalog__swiper-item">Увеличение скорости чтения</li>
+                  <li class="catalog__swiper-item">
+                    Увеличение скорости чтения
+                  </li>
                   <li class="catalog__swiper-item">Артикуляция</li>
                   <li class="catalog__swiper-item">Развитие речи</li>
                   <li class="catalog__swiper-item">Развитие внимания</li>
-                  <span id="readingDots"></span>
-                  <div id="readingMore" class="catalog__swiper--items">
+                  <span class="dots" id="dots"></span>
+                  <div id="more" class="catalog__swiper--items more">
                     <li class="catalog__swiper-item">Увеличение поля зрения</li>
-                    <li class="catalog__swiper-item">Увеличение словарного запаса</li>
+                    <li class="catalog__swiper-item">
+                      Увеличение словарного запаса
+                    </li>
                     <li class="catalog__swiper-item">Понимание прочитанного</li>
                     <li class="catalog__swiper-item">Пересказ</li>
-                    <li class="catalog__swiper-item">Различные техники понимания</li>
-                    <li class="catalog__swiper-item">Пробный урок и диагностика БЕСПЛАТНО</li>
+                    <li class="catalog__swiper-item">
+                      Различные техники понимания
+                    </li>
+                    <li class="catalog__swiper-item">
+                      Пробный урок и диагностика БЕСПЛАТНО
+                    </li>
                   </div>
                 </ul>
-                <button class="catalog__swiper--btn" id="readingBtn" onclick="readingReadMore()">Подробнее...</button>
+                <button
+                  class="catalog__swiper--btn"
+                  id="btn"
+                  onclick="readMore()"
+                >
+                  Подробнее...
+                </button>
               </div>
-              <button class="swiper__btn btn reading__bg ">Выбрать</button>
+              <button class="swiper__btn btn reading__bg">Выбрать</button>
             </div>
-            <div class="catalog__swiper-slide swiper-slide">
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
               <h3 class="arithmetic__bg">ментальная арифметика</h3>
               <span class="price">20 000  тг</span>
               <div class="catalog__swiper-timetable">
-                <ul class="catalog__swiper-items">
-                  <li class="catalog__swiper-item">2 занятия в неделю по 1 ч.</li>
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item swiper-timetable">2 занятия в неделю по 1 ч.</li>
                 </ul>
               </div>
               <div class="catalog__swiper-subject">
@@ -237,29 +269,117 @@
                   <li class="catalog__swiper-item">Развитие высокой концентрации</li>
                   <li class="catalog__swiper-item">Увеличесние поля зрения</li>
                   <li class="catalog__swiper-item">Фотографическая память</li>
-                  <span id="arithmeticDots"></span>
-                  <div id="arithmeticMore" class="catalog__swiper--items">
+                  <span id="dots"></span>
+                  <div id="more" class="catalog__swiper--items">
                     <li class="catalog__swiper-item">Пробный урок БЕСПЛАТНО</li>
                     <li class="catalog__swiper-item">Обучающая платформа в ПОДАРОК</li>
-                    <li class="catalog__swiper-item">
-                      Усвоение изучаемого материала
-                    </li>
-                    <li class="catalog__swiper-item">
-                      Различные техники запоминания
-                    </li>
-                    <li class="catalog__swiper-item">
-                      Развитие логико-математического мышления
-                    </li>
                   </div>
                 </ul>
-                <button class="catalog__swiper--btn" id="arithmeticBtn" onclick="arithmeticReadMore()">Подробнее...</button>
+                <button
+                  class="catalog__swiper--btn"
+                  id="btn"
+                  onclick="readMore()"
+                >
+                  Подробнее...
+                </button>
               </div>
               <button class="swiper__btn btn arithmetic__bg">Выбрать</button>
             </div>
-          </div>          
+          </div> 
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
+              <h3 class="calligraphy__bg">Каллиграфия</h3>
+              <span class="price">24 000  тг</span>
+              <div class="catalog__swiper-timetable">
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item swiper-timetable">3 занятия в неделю по 1 ч.</li>
+                </ul>
+              </div>
+              <div class="catalog__swiper-subject">
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item">Развитие памяти</li>
+                  <li class="catalog__swiper-item">Восприятие пространства</li>
+                  <li class="catalog__swiper-item">Прокачивание мелкой моторики</li>
+                  <li class="catalog__swiper-item">Основы грамотного письма</li>
+                  <span id="dots"></span>
+                  <div id="more" class="catalog__swiper--items">
+                    <li class="catalog__swiper-item">Развитие физической выносливости и усидчивости</li>
+                    <li class="catalog__swiper-item">Умение писать диктанты без графических и орфографических ошибок</li>
+                  </div>
+                </ul>
+                <button
+                  class="catalog__swiper--btn"
+                  id="btn"
+                  onclick="readMore()"
+                >
+                  Подробнее...
+                </button>
+              </div>
+              <button class="swiper__btn btn calligraphy__bg">Выбрать</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
+              <h3 class="english__bg">Английский язык</h3>
+              <span class="price">18 000  тг</span>
+              <div class="catalog__swiper-timetable">
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item swiper-timetable">2 занятия в неделю по 1,5 ч.</li>
+                </ul>
+              </div>
+              <div class="catalog__swiper-subject">
+                <ul class="catalog__swiper--items english__padding">
+                  <li class="catalog__swiper-item">
+                    Чтение по правилам
+                  </li>
+                  <li class="catalog__swiper-item">Знание 500 новых слов</li>
+                  <li class="catalog__swiper-item ">Самостоятельное выполнение домашнего задания</li>
+                </ul>
+              </div>
+              <button class="swiper__btn btn english__bg">Выбрать</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__slide--wraper">
+              <h3 class="extended__bg">Группа продленного дня</h3>
+              <span class="price">35 000  тг</span>
+              <div class="catalog__swiper-timetable">
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item swiper-timetable">5 раз в неделю</li>
+                  <li class="catalog__swiper-item swiper-timetable">1 смена с 9:00 по 12:00</li>
+                  <li class="catalog__swiper-item swiper-timetable">2 смена с 14:00 по 17:00</li>
+                </ul>
+              </div>
+              <div class="catalog__swiper-subject">
+                <ul class="catalog__swiper--items">
+                  <li class="catalog__swiper-item">Подготовка к СОР и СОЧ</li>
+                  <li class="catalog__swiper-item">Проработка пробелов в знаниях</li>
+                  <li class="catalog__swiper-item">Индивидуальный подход</li>
+                  <li class="catalog__swiper-item">Выявление сильных сторон ребенка</li>
+                  <span id="dots"></span>
+                  <div id="more" class="catalog__swiper--items">
+                    <li class="catalog__swiper-item">Профессиональная помощь в подготовке домашних заданий</li>
+                    <li class="catalog__swiper-item">Дополнительные образовательные дисциплины</li>
+                  </div>
+                </ul>
+                <button
+                  class="catalog__swiper--btn"
+                  id="btn"
+                  onclick="readMore()"
+                >
+                  Подробнее...
+                </button>
+              </div>
+              <button class="swiper__btn btn arithmetic__bg">Выбрать</button>
+            </div>
+          </div>                    
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>        
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

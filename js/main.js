@@ -1,66 +1,57 @@
-      var swiper = new Swiper(".swiper", {
+      var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
-        spaceBetween: 25,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
         mousewhell: true,
         keyboard: true,
       });
 
+      let btns = document.querySelectorAll('.catalog__swiper--btn')
+      
+      for(btn of btns) {
+        btn.addEventListener('click',  function () {
+          let card = this.closest('.catalog__swiper-subject');
+          let dots = card.querySelectorAll('.dots');
+          let more = card.querySelectorAll('.more');
+
+          if(dots.style.display === 'none') {
+            dots.style.display = 'inline';
+            more.style.display = 'none';
+            this.textContent = 'Подробнее';
+          }else {
+            dots.style.display = 'none';
+            more.style.display = 'inline';
+            this.textContent = 'Скрыть';
+          }
+        
+        })
+      }
+
+//   function readMore(dotsId, moreId, btnId) {
+//   console.log('asdasdasdasd')
+//   const dots  = document.getElementById(dotsId);
+//   const more  = document.getElementById(moreId);
+//   const btn = document.getElementById(btnId);
+
+//   if(dots.style.display === "none"){
+//     dots.style.display="inline";
+//     btn.innerHTML="Подробнее...";
+//     more.style.display="none"
+//   } else {
+//     dots.style.display="none";
+//     btn.innerHTML="Cкрыть...";
+//     more.style.display="inline"
+//   }
+// }
 
 
-
-
- //  подробнее
-
- function schoolReadMore() {
-    var schoolDots  = document.getElementById("schoolDots");
-    var schoolMore  = document.getElementById("schoolMore");
-    var schoolBtn = document.getElementById("schoolBtn");
-
-    if(schoolDots.style.display === "none"){
-      schoolDots.style.display="inline";
-      schoolBtn.innerHTML="Подробнее...";
-      schoolMore.style.display="none"
-    } else {
-      schoolDots.style.display="none";
-      schoolBtn.innerHTML="Cкрыть...";
-      schoolMore.style.display="inline"
-    }
-  }
-
-  function readingReadMore() {
-    var readingDots  = document.getElementById("readingDots");
-    var readingMore  = document.getElementById("readingMore");
-    var readingBtn = document.getElementById("readingBtn");
-
-    if(readingDots.style.display === "none"){
-      readingDots.style.display="inline";
-      readingBtn.innerHTML="Подробнее...";
-      readingMore.style.display="none"
-    } else {
-      readingDots.style.display="none";
-      readingBtn.innerHTML="Cкрыть...";
-      readingMore.style.display="inline"
-    }
-  }
-
-   function arithmeticReadMore() {
-    var arithmeticDots  = document.getElementById("arithmeticDots");
-    var arithmeticMore  = document.getElementById("arithmeticMore");
-    var arithmeticBtn = document.getElementById("arithmeticBtn");
-
-    if(arithmeticDots.style.display === "none"){
-      arithmeticDots.style.display="inline";
-      arithmeticBtn.innerHTML="Подробнее...";
-      arithmeticMore.style.display="none"
-    } else {
-      arithmeticDots.style.display="none";
-      arithmeticBtn.innerHTML="Cкрыть...";
-      arithmeticMore.style.display="inline"
-    }
-  }
-
-
+// document.getElementById("schoolBtn").addEventListener("click", () => {
+//   readMore("schoolDots", "schoolMore", "schoolBtn")
+// } );
+// document.getElementById("readingBtn").addEventListener("click", () => {
+//   readMore("readingDots", "readingMore", "readingBtn")
+// } );
+// document.getElementById("arithmeticBtn").addEventListener("click", ()=> {readMore("arithmeticDots", "arithmeticMore", "arithmeticBtn")});
