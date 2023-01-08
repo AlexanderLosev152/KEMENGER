@@ -364,10 +364,12 @@ body {
   padding-bottom: 120px;
 }
 
-.mySwiper {
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #000000;
+  font-size: 50px;
 }
-.swiper-wrapper {
-}
+
 .swiper-slide {
   display: flex;
   align-items: flex-start;
@@ -409,8 +411,6 @@ body {
   text-align: center;
 }
 
-.school__bg {
-}
 .price {
   padding: 60px 0 24px;
   font-style: normal;
@@ -419,6 +419,7 @@ body {
   line-height: 59px;
   text-transform: uppercase;
 }
+
 .catalog__swiper-timetable {
   display: flex;
   flex-direction: column;
@@ -427,20 +428,14 @@ body {
   margin: 30px 0 55px;
 }
 
-.english__padding {
-}
-
-.swiper-timetable {
-}
-
-.catalog__swiper--items {
-}
 .catalog__swiper-item {
   padding-bottom: 24px;
 }
+
 .catalog__swiper-subject {
   margin-bottom: 70px;
 }
+
 .catalog__swiper--btn {
   border: none;
   background: transparent;
@@ -520,7 +515,6 @@ body {
 
 .certificate {
   margin-bottom: 115px;
-  
 }
 
 .certificate__items {
@@ -548,13 +542,114 @@ body {
   z-index: -1;
 }
 
-
-
 .certificate__item {
   width: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .certificate__item:hover {
   transform: scale(2);
+}
+
+/* contact  */
+
+.contact__wrapper {
+  max-width: 590px;
+  max-height: 540px;
+  background: #018fa3;
+  box-shadow: 0px 50px 50px -27px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 57px;
+}
+
+.contact__wrapper::after {
+  content: url("../images/contact__bg.png");
+  position: absolute;
+  top: -84px;
+  left: 798px;
+}
+
+.contact__wrapper--wrap {
+  padding: 20px;
+}
+
+.contact__wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.contact__number {
+  padding-bottom: 20px;
+}
+.contact__subtitle {
+  padding-bottom: 8px;
+}
+
+.contact__address {
+  padding-bottom: 20px;
+}
+
+.contact__timetable {
+  padding-bottom: 20px;
+}
+
+.contact__timetable span {
+  display: block;
+}
+
+.contact__email {
+  padding-bottom: 20px;
+}
+.contact__map {
+  background-image: url("../images/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 539px;
+  margin-bottom: 87px;
+  position: relative;
+}
+
+.contact__map::after {
+  content: url("../images/yellow__map.png");
+  position: absolute;
+  top: 74px;
+  left: 189px;
+  z-index: -1;
+}
+
+.contact__map::before {
+  content: url("../images/blue__map.png");
+  position: absolute;
+  bottom: 30px;
+  right: 200px;
+  z-index: -1;
+}
+
+
+/* footer */
+
+.footer {
+  background: #0A2530;
+  color: #fff;
+  
+}
+
+.footer__top {
+  display: flex;
+  height: 200px;
+}
+
+.logo__ds {
+  margin-left: 285px;
 }
