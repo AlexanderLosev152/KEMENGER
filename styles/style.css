@@ -47,6 +47,67 @@ body {
   padding: 60px 0;
 }
 
+/* modal */
+
+.my__modal {
+  background: #f6faff;
+  border-radius: 30px;
+  width: 400px;
+  height: 530px;
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 65%;
+}
+.my__modal--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.my__modal--title {
+  width: 205px;
+  padding-bottom: 32px;
+}
+
+.my__modal--title span {
+  color: #018fa3;
+}
+
+.my__modal--form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+}
+
+.my__modal--input {
+  width: 336px;
+  height: 60px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.my__modal--textarea {
+  height: 120px;
+  resize: none;
+  box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  border: none;
+}
+
+.my__modal--textarea::placeholder,
+.my__modal--input::placeholder {
+  padding-left: 10px;
+  color: #c2c2c2;
+}
+
+.my__modal--btn {
+}
+
 /* header */
 
 .header {
@@ -107,6 +168,7 @@ body {
   display: flex;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 .header__info--text-title {
   width: 664px;
@@ -636,13 +698,11 @@ body {
   z-index: -1;
 }
 
-
 /* footer */
 
 .footer {
-  background: #0A2530;
+  background: #0a2530;
   color: #fff;
-  
 }
 
 .footer__top {
@@ -652,4 +712,5 @@ body {
 
 .logo__ds {
   margin-left: 285px;
+  cursor: pointer;
 }
